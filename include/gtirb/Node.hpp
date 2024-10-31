@@ -18,6 +18,8 @@
 #include <gtirb/Casting.hpp>
 #include <gtirb/Context.hpp>
 #include <gtirb/Export.hpp>
+#include <boost/uuid/uuid_generators.hpp>
+#include <boost/random/mersenne_twister.hpp>
 #include <functional>
 #include <string>
 
@@ -25,6 +27,8 @@
 /// \brief Class gtirb::Node.
 
 namespace gtirb {
+extern boost::uuids::basic_random_generator<boost::random::mt19937> UUIDGenerator;
+
 class Node;
 
 /// \class Node
