@@ -27,7 +27,6 @@
 /// \brief Class gtirb::Node.
 
 namespace gtirb {
-extern boost::uuids::basic_random_generator<boost::random::mt19937> UUIDGenerator;
 
 class Node;
 
@@ -43,6 +42,8 @@ class Node;
 class GTIRB_EXPORT_API Node {
 public:
   /// \cond internal
+
+  static boost::uuids::basic_random_generator<boost::random::mt19937> UUIDGenerator;
 
   // The enum constants below must be grouped according to the inheritance
   // hierarchy such that all descendants of a type X must appear between the
